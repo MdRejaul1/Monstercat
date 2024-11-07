@@ -2,11 +2,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+} body{
+  background-color: black;
 }
 
 .container{
- max-width: 534px;
- background-color: black;
+ max-width: 530px;
+
 }
  
 /* background img */
@@ -22,7 +24,7 @@
     } 
    
 .wrapper{
-    width: 93%;
+    width: 94%;
  margin-inline: auto;
 }
 header{
@@ -49,7 +51,16 @@ header{
         font-size: 1.7rem;
         color: white;
        
-      }   
+      }  
+      /* nav list*/
+      .nav-list{
+        visibility: hidden;
+        color: white;
+        font-size: 1.4rem;
+      } 
+      .nav-list i + i {
+        margin-left: 0.7rem;
+      }
       
       /*hero img and content section*/
       .hero-img{
@@ -59,7 +70,11 @@ header{
        
       }
 
-      .caption{
+      .hero-img img{
+        width: 100%;
+      }
+
+      .caption {
         margin-block: 1rem;
         color: white;
         font-style: italic;
@@ -68,6 +83,10 @@ header{
 
       .caption span{
         color: #50A584;
+      }
+
+      .laptop {
+        visibility: hidden;
       }
 
       .lv-days-container p {
@@ -131,7 +150,7 @@ header{
 
            color: white;
            letter-spacing: 1px;
-           font-size: 1.6rem;
+           font-size:clamp(1.7rem, 4.3vw, 2.2rem);
            font-weight: 700;
            
      }
@@ -144,7 +163,8 @@ header{
       gap: 0.rem;
       border: 1px solid white;
       color: white;
-      width: 19rem;
+      width: 65%;
+  
        text-align: center;
        margin-top: 1rem;
      }
@@ -166,6 +186,8 @@ header{
       color: white;
      }
 
+     
+
      .list-container{
       display: flex;
       justify-content: space-between;
@@ -180,7 +202,7 @@ header{
      }
 
      .track-list h2{
-      font-size: 1.8rem;
+      font-size: clamp(2rem, 4.3vw, 2.2rem);
       margin-bottom: 1rem;
      }
 
@@ -287,7 +309,8 @@ header{
         font-size: 1.5rem;
        }
 
-       .acknowlegment{
+
+       .acknowlegment {
         color: white;
         font-size:1rem;
         font-style:italic;
@@ -304,3 +327,79 @@ header{
           padding-bottom: 1rem;
           
         }
+
+        .copyright-social-container p{
+          color: white;
+          font-size:1rem;
+          font-style:italic;
+          width: 94%;
+          margin-inline: auto;
+          margin-bottom: 1.5rem;
+        
+        }
+
+        /* media querey */
+        @media (min-width: 531px) and (max-width: 1100px) {
+          .container {
+              max-width: none; /* Remove the max-width restriction */
+              width: 100%; /* Set width to 100% */
+          }
+      
+
+          .nav-list{
+            visibility: visible;
+          }
+
+          .nav-list i + i {
+            margin-left: 1rem;
+          }
+          
+         
+
+
+          .laptop {
+            visibility: visible;
+            writing-mode: vertical-lr;
+          }
+          .mobail{
+            visibility: hidden;
+          }
+
+          .hero-img {
+            display: flex;
+            gap: 0.4rem;
+          }
+
+          .hero-img  .laptop {
+            align-self: end;
+          }
+
+          .hero-img-content{
+            display: flex;
+            justify-content: space-between;
+             gap: 8rem;
+            align-items: center;
+          }
+
+          .about-monster-input, .about {
+            width: 94%;
+            margin-inline: auto;
+           display:grid;
+           gap: 2rem;
+           grid-template-columns: repeat(2, 1fr);
+          }
+
+          .copyright-social-container{
+            display: flex;
+            width: 94%;
+            margin-inline: auto;
+
+          }
+          
+
+
+      }
+
+       
+
+
